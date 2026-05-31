@@ -11,22 +11,22 @@
 - develop: integración de funcionalidades.
 - feature/nombre-funcionalidad: desarrollo de nuevas características.
     - Ejemplo
-        - Feature/combat-system
-        - Feature/altar-system
+        - feature/combat-system
+        - feature/altar-system
 - bugfix/nombre-error: corrección de errores.
   - Ejemplo
-    - Bugfix/Player-movement
-    - Bugfix/Enemy-controller
+    - bugfix/Player-movement
+    - bugfix/Enemy-controller
   
-### Pull Requets
+### Pull Requests
 - Todos los cambios deberán realizarse mediante Pull Request.
 - No se permitirán cambios directos en la rama main.
 
 ### Aprobación de Merges
-- El Pull Request deberá ser aprovado por los integrantes de equipo.
+- El Pull Request deberá ser aprobado por los integrantes de equipo.
 - La integración final será realizada por el responsable del repositorio.
 
-### Frecuencia de comits
+### Frecuencia de commits
 - Realizar commits al finalizar una tarea especifíca.
 - Realizar commits al finalizar cada sesión de trabajo.
 
@@ -35,7 +35,7 @@
     - PascalCase
   - Ejemplos 
     - PlayerManager
-    - GameManger
+    - GameManager
 
   ### Objetos
     -  Prefijo: obj_
@@ -57,14 +57,14 @@
   - Ejemplos:
     - panel_MainMenu
     - panel_Pause
-### Texos
+### Textos
     - Prefijo: txt_
   -  Ejemplos:
     - txt_Title
-    - txt_Healt
+    - txt_Health
 ### Audio:
 #### Musica:
-    - Prefijo: bmg_
+    - Prefijo: bgm_
   - Ejemplos: 
     - bgm_MainMenu
     - bgm_Credits
