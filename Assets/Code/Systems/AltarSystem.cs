@@ -12,14 +12,14 @@ public class AltarSystem : MonoBehaviour
     [Header("temporal")]
     public KeyCode AlatarKey = KeyCode.R; 
 
-    private FlameHealth player;//vida del jugador
+    private LifeSystem player;//vida del jugador
     private bool isHealing = false;//Para saber si está curando o no 
     private float tickTimer = 0f;//el timmer del tick, acumula 
     private Vector3 lastPosition;//revisamos la posición del jugador
 
     void Start()
     {
-        player = FindObjectOfType<FlameHealth>();
+        player = FindObjectOfType<LifeSystem>();
         lastPosition = player.transform.position;
     }
 
@@ -31,8 +31,11 @@ public class AltarSystem : MonoBehaviour
         //la tecla es temporal y tendrá que actulizarse esta función
         if (Input.GetKeyDown(AlatarKey))
         {
+            Debug.Log("R detectada");
+
             isHealing = true;
             tickTimer = 0f;
+            player.isRecovering = true;
         }
 
         if (isHealing)
@@ -55,8 +58,14 @@ public class AltarSystem : MonoBehaviour
     public void Activate()
     {
         if (player == null) return;
+
         player.Heal(healPerTick);
+
+        if (player.CurrentHealth >= player.Health)
+        {
+            isHealing = false;
+            player.isRecovering = false;
+        }
     }
 }
 
-//**Falta implementar la parte de que detenga el ampunt que se resta solo para sumarlo**

@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdc0de38221a5444974f7849298c41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FakeEnemy
-  damage: 20
+  damage: 5
   attackCooldown: 2
 --- !u!1 &1150820944
 GameObject:
@@ -1613,11 +1613,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlameHealth
   Health: 100
-  drainRate: 10
+  drainRate: 5
   drainInterval: 5
   healthBar: {fileID: 492429592}
   gameOverPanel: {fileID: 1725902835}
   gameOverText: {fileID: 1866961295}
+  isRecovering: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

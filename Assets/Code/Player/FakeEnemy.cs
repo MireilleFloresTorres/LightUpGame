@@ -26,7 +26,8 @@ public class FakeEnemy : MonoBehaviour
     //sujeto a cambios
     void Attack()
     {
-        FlameHealth player = FindObjectOfType<FlameHealth>();
+        if (damage <= 0) return;
+        LifeSystem player = FindObjectOfType<LifeSystem>();
         if (player) player.TakeDamage(damage);
     }
 }
