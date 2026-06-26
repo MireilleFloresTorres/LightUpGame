@@ -12,7 +12,7 @@ public class FlameHealth : MonoBehaviour
     [Header("UI")]
     public Slider healthBar; //**Es para el slider sujeto a cambios para el HUD**
     //asignación de panel y texto para el game over temporal
-    //**IMPORTANTE Sujeto a cambio de panel a escenas**
+    // Sujeto a cambio de panel a escenas**
     public GameObject gameOverPanel;
     public TextMeshProUGUI gameOverText;
 
@@ -56,7 +56,7 @@ public class FlameHealth : MonoBehaviour
         if (currentHealth <= 0) Die();
     }
 
-    //**IMPORTANTE** 
+     
     //La parte del current Health con el amount está pensada para los altares 
     //Busca sumar vida, se queda publica para poder ser usada en el script de altares 
     public
@@ -73,12 +73,12 @@ public class FlameHealth : MonoBehaviour
         isDead = true;
         CancelInvoke(nameof(DrainHealth));
         //Activa el game over
-        //**TEMPORAL** despúes se llamará la escena
+        // despues se llamar la escena
         gameOverPanel.SetActive(true);
         if (gameOverText) gameOverText.text = "Te has quedado sin vida";
     }
 
-    //Para la vida de vida
+    //para la vida de vida
     //Se clacula el porcentaje: currentHealth /Health;
     //Vaor entre 0 y1, se asigna al slider y se llama cada que se actuliza la vida
     void UpdateUI()
